@@ -1,0 +1,10 @@
+Package: MIRL
+Type: Package
+Title: Multiple Imputation Random Lasso for Variable Selection with Missing Entries
+Version: 1.0
+Author: Ying Liu, Yuanjia Wang, Yang Feng, Melanie M. Wall
+Maintainer: Ying Liu <summeryingl@gmail.com>
+Description: Implements a variable selection and prediction method for high-dimensional data with missing entries following the paper Liu et al. (2016) <doi:10.1214/15-AOAS899>. It deals with missingness by multiple imputation and produces a selection probability for each variable following stability selection. The user can further choose a threshold for the selection probability to select a final set of variables. The threshold can be picked by cross validation or the user can define a practical threshold for selection probability. If you find this work useful for your application, please cite the method paper: Liu Y, Wang Y, Feng Y, Wall MM. VARIABLE SELECTION AND PREDICTION WITH INCOMPLETE HIGH-DIMENSIONAL DATA. The annals of applied statistics. 2016;10(1):418-450.
+License: GPL-2
+Depends:glmnet,mice,MASS,boot
+

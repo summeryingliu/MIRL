@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "ntest<-function(sens,spec,prev,d,alpha=0.05)\n{\n  n1=qnorm(1-alpha/2)^2*sens*(1-sens)/d^2/prev\n  n2=qnorm(1-alpha/2)^2*spec*(1-spec)/d^2/(1-prev)\n  O=list('nsens'=n1,'nspec'=n2)\n  O\n}\n\ndtest<-function(n,keep,sens,spec,prev,alpha=0.05)\n{\n  d1=qnorm(1-alpha/2)*sqrt(sens*(1-sens)/(n*keep*prev))\n  d2=qnorm(1-alpha/2)*sqrt(spec*(1-spec)/(keep*n*(1-prev)))\n  O=list('dsens'=d1,'dspec'=d2)\n  O\n}\n\n#depression\nntest(0.725,0.703,0.2,0.1)\ndtest(250,0.7,0.725,0.703,0.2)\n\n#PTSD\nntest(0.854,0.676,0.25,0.1)\ndtest(250,0.7,0.854,0.676,0.25)\n",
+    "created" : 1523308449899.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1133505275",
+    "id" : "9D52D7A9",
+    "lastKnownWriteTime" : 1523309323,
+    "last_content_update" : 1523309323152,
+    "path" : "~/Rcreation/samplesize/sensspec.R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
